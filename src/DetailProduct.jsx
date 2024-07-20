@@ -6,7 +6,7 @@ import './App.css'
 
 const DetailProduct = ({ productDetail, cart, addToCart }) => {
     const { id } = useParams()
-    const findId = productDetail.find((i) => i.productId === (parseInt(id)))
+    const findId = productDetail.find((i) => i.id === (parseInt(id)))
     const saveMoney = parseInt(findId.previousPrice - findId.price)
     const [count, setCount] = useState(1)
 

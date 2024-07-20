@@ -59,7 +59,7 @@ function App() {
 
   const products = [
     {
-      productId: 1,
+      id: 1,
       productName: 'Accostic Guitar',
       productImage: 'https://yamaha.ndcdn.in/media/catalog/product/cache/263be203fdb4831fcff24348c255c941/f/g/fgc_ta_bs_3.jpg',
       productDetails: 'Yamaha FGC -TA TransAcoustic cutaway guitars transport you to new creative spaces via immersive built-in reverb and chorus effects that actually resonate within the body of the instrument itself. Combining classic craftsmanship with revolutionary technology, the FGC-TA cutaway guitar will enable you to play and sound your best no matter where you are, and its cutaway design provides easy access to every note on the fretboard.',
@@ -68,7 +68,7 @@ function App() {
       previousPrice: 95000
     },
     {
-      productId: 2,
+      id: 2,
       productName: 'Electric Guitar',
       productImage: 'https://yamaha.ndcdn.in/media/catalog/product/cache/9e0f31af0cdc06df956748b13dabad87/p/a/pacs_12_black_front_0001.jpg',
       productDetails: 'The PACS+12 delivers exceptional sound and playability, and features a newly designed alder body, a slim C-shape maple neck with a rosewood fingerboard, Reflectone pickups co-developed with Rupert Neve Designs, and a choice of four vibrant finishes.',
@@ -77,7 +77,7 @@ function App() {
       previousPrice: 185000
     },
     {
-      productId: 3,
+      id: 3,
       productName: 'Yamaha PSR-SX700 Digital Workstation',
       productImage: 'https://yamaha.ndcdn.in/media/catalog/product/cache/9e0f31af0cdc06df956748b13dabad87/p/s/psr_sx700_-_4.png',
       productDetails: 'Take your performance to a whole new dimension with the PSR-SX. Replacing the hugely successful PSR-S series, the PSR-SX700 is the new generation in Digital Workstation sound, design and user experience. These instruments will inspire and intensify your musical performance and enjoyment.',
@@ -86,7 +86,7 @@ function App() {
       previousPrice: 120990
     },
     {
-      productId: 4,
+      id: 4,
       productName: 'Yamaha DTX-402K Electronic Drum',
       productImage: 'https://yamaha.ndcdn.in/media/catalog/product/cache/9e0f31af0cdc06df956748b13dabad87/d/t/dtx402k-1.jpg',
       productDetails: '  Yamaha DTX-402K Electronic Drum. Newly developed drum pads incorporating Yamahas unique floating system. KU100 kick unit reduces noise when playing the bass drum. Choke-able crash cymbal pad.',
@@ -95,7 +95,7 @@ function App() {
       previousPrice: 120990
     },
     {
-      productId: 5,
+      id: 5,
       productName: 'Yamaha DM-305 Microphone',
       productImage: 'https://yamaha.ndcdn.in/media/catalog/product/cache/9e0f31af0cdc06df956748b13dabad87/d/m/dm-305-1-10jan23.jpg',
       productDetails: 'Yamaha genuine microphone. The best directional characteristic for vocal (cardioid). Higher sound quality to highlight vocal sound. Yamaha original body design.',
@@ -104,7 +104,7 @@ function App() {
       previousPrice: 6500
     },
     {
-      productId: 6,
+      id: 6,
       productName: 'Yamaha HS4 (White) Powered Studio Monitors',
       productImage: 'https://yamaha.ndcdn.in/media/catalog/product/cache/9e0f31af0cdc06df956748b13dabad87/h/s/hs4-white-1.jpg',
       productDetails: 'HS4 Powered Studio Monitors High-quality compact studio monitors for the uncompromising creator. 2-way bass-reflex powered speaker with 4.5" cone woofer and 1" dome tweeter. 60 Hz - 22 kHz frequency response (-10 dB). 26 W + 26 W output power (Dynamic, RL=6 Ω). ROOM CONTROL and HIGH TRIM response controls',
@@ -113,7 +113,7 @@ function App() {
       previousPrice: 28000
     },
     {
-      productId: 7,
+      id: 7,
       productName: 'Yamaha AG08 (Black) Live Streaming Mixer',
       productImage: 'https://yamaha.ndcdn.in/media/catalog/product/cache/9e0f31af0cdc06df956748b13dabad87/a/g/ag08-black-1.jpg',
       productDetails: 'AG08 Live Streaming Mixer An 8-channel live streaming mixer featuring two phantom power inputs for condenser mics, an integrated USB audio interface, voice changer and sampler.',
@@ -122,7 +122,7 @@ function App() {
       previousPrice: 63000
     },
     {
-      productId: 8,
+      id: 8,
       productName: 'Hummingbird Ultima, Exclusive, Autumnburst',
       productImage: 'https://images.ctfassets.net/m8onsx4mm13s/5HXW07OllonLAtHAcDOomA/4ad0dce5fb608cd9fd58b94153d58479/SSHUABPSL0807_front.png?w=1200&h=1200',
       productDetails: 'Select flame maple top, quilt maple back and sides, mahogany neck, ebony fretboard, ornate abalone binding and vine neck and headstock inlays, matching Hummingbird pickguard graphics',
@@ -131,7 +131,7 @@ function App() {
       previousPrice: 95000
     },
     {
-      productId: 9,
+      id: 9,
       productName: '1969 ES-330TDW, Walnut',
       productImage: 'https://images.ctfassets.net/m8onsx4mm13s/3umHXZi8entpwznKJbjsGy/5b6962efae5c75d6bdda32faa7113dd8/GCVP0034_front.png?w=1200&h=1200',
       productDetails: 'Boasting the same dimensions as the ES-335, the ES-330 was its hollowbody cousin that debuted in 1959. Although the trend toward heavier guitar sounds at the time and its predisposition to feed back at high volume made it take a back seat to the ES-335, today, it’s appreciated as a versatile instrument for many styles of music.',
@@ -140,7 +140,7 @@ function App() {
       previousPrice: 650000
     },
     {
-      productId: 10,
+      id: 10,
       productName: '70s Flying V, Antique Natural',
       productImage: 'https://images.ctfassets.net/m8onsx4mm13s/24KThJws0bZLWcUTYtYsuN/28f672413a67a6b828443e181f25fae1/DSVS00ANCH1_front.png?w=1200&h=1200',
       productDetails: 'The iconic 70s classic is ready to take flight again. With its bound rosewood fingerboard, SlimTaper™ neck, and a pair of uncovered 70s Tribute humbuckers™ hand-wired with Orange Drop® capacitors, this Flying V™ is set to nail all of the classic tones of the era.',
@@ -149,7 +149,7 @@ function App() {
       previousPrice: 190000
     },
     {
-      productId: 11,
+      id: 11,
       productName: "SG Standard '61 Sideways Vibrola, Vintage Cherry",
       productImage: 'https://images.ctfassets.net/m8onsx4mm13s/24KThJws0bZLWcUTYtYsuN/28f672413a67a6b828443e181f25fae1/DSVS00ANCH1_front.png?w=1200&h=1200',
       productDetails: 'The SG™ Standard ‘61 Sideways Vibrola™ returns to the classic design that made it relevant, played, and loved -- shaping sound across generations and genres of music.',
