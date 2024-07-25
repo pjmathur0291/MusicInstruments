@@ -5,14 +5,14 @@ import Navbar from "./Navbar";
 const Cart = ({ cart, initialCart }) => {
     const [cartItem, setCartItem] = useState(initialCart)
     const [count, setCount] = useState(1)
-    const inc = () => {
+    const inc = (id) => {
         setCount(count + 1)
         if (count >= 5) {
             setCount(0)
         }
     }
 
-    const dec = () => {
+    const dec = (id) => {
         setCount(count - 1)
         if (count <= 0) {
             setCount(0)
@@ -63,7 +63,7 @@ const Cart = ({ cart, initialCart }) => {
                                     </div>
                                     <div className='productPricing cartPrice'>
                                         <span> ₹</span>
-                                        <span className='Pricing'>{i.price}</span>
+                                        <span className='Pricing'>{i.price * count}</span>
                                     </div>
                                 </div>
                                 <div className="clear"></div>

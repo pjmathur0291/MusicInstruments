@@ -1,15 +1,23 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
+import axios from 'axios'
 
-const AllProducts = ({ product }) => {
+const AllProducts = () => {
   const [currentPage, setCurrentPage] = useState(1);
+  const [dataProduct, setDataProduct] = useState([])
   const productsPerPage = 4;
+
+  const data = axios.get('http://localhost:5500/')
+    .then((res) => {
+      setDataProduct(res.data)
+    })
+
 
   // Get current products
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-  const currentProducts = product.slice(indexOfFirstProduct, indexOfLastProduct);
+  const currentProducts = dataProduct.slice(indexOfFirstProduct, indexOfLastProduct);
 
   // Change page
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
@@ -49,7 +57,7 @@ const AllProducts = ({ product }) => {
       ))}
 
       <div className="pagination">
-        {[...Array(Math.ceil(product.length / productsPerPage)).keys()].map(number => (
+        {[...Array(Math.ceil(dataProduct.length / productsPerPage)).keys()].map(number => (
           <button key={number + 1} onClick={() => paginate(number + 1)}>
             {number + 1}
           </button>
