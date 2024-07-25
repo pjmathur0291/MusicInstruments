@@ -8,14 +8,14 @@ const Cart = ({ cart, initialCart }) => {
     const inc = () => {
         setCount(count + 1)
         if (count >= 5) {
-            setCount(1)
+            setCount(0)
         }
     }
 
     const dec = () => {
         setCount(count - 1)
-        if (count <= 1) {
-            setCount(1)
+        if (count <= 0) {
+            setCount(0)
         }
     }
 
@@ -52,7 +52,7 @@ const Cart = ({ cart, initialCart }) => {
                                         <button onClick={inc}>+</button>
                                     </div>
                                     <div className="someMoreOptions">
-                                        <span onClick={(id) => deleteProduct(i.id)}>Delete</span> |
+                                        <span onClick={() => deleteProduct(i.id)}>Delete</span> |
                                         <Link to={'/'}>
                                             <span> Save For Later</span> |
                                         </Link>
@@ -63,7 +63,7 @@ const Cart = ({ cart, initialCart }) => {
                                     </div>
                                     <div className='productPricing cartPrice'>
                                         <span> ₹</span>
-                                        <span className='Pricing'>{i.price * count}</span>
+                                        <span className='Pricing'>{i.price}</span>
                                     </div>
                                 </div>
                                 <div className="clear"></div>
